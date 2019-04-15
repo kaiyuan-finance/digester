@@ -16,4 +16,5 @@ digester "select id,name from person where sex='F' and age > 33"
 digest:0xBD3CCD01431FD8BF
 digest_text:select id,name from person where sex=? and age > ?
 ```
+If your sql contains " or ` , you need to escape them using a \ .
 
