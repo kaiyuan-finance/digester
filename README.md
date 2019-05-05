@@ -4,7 +4,7 @@ This is a simple tool to generate digest for a given sql
 When using proxysql, sometime you want to send a sql to the read group, but it's not easy to find the sql digest from table
 `stats_mysql_query_digest`, so this tool can be used to generate digest for that sql.  
 
-Build:  
+### Build:  
 (Before building, please read file `proxysql.h` )
 ```
 # yum install gcc,gcc-c++
@@ -12,7 +12,7 @@ Build:
 g++ c_tokenizer.c c_tokenizer.h SpookyV2.cpp SpookyV2.h proxysql.h main.cpp -o digester
 
 ```
-Example:
+### Example:
 ```
 digester "select id,name from person where sex='F' and age > 33"
 digest:0xBD3CCD01431FD8BF
